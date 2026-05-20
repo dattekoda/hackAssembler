@@ -11,11 +11,15 @@
 
 size_t	ft_strlen(const char *s);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int	ft_memmove(void *dst, const void *src, size_t n);
+int	ft_isspace(int c);
+char	*ft_strchr(const char *s, int c);
 int	ft_get_next_line(char **line, int fd);
 
 void		error(const char *fmt, ...);
 static int	isInvalidArg(int argc, char *argv[]);
 int		readFileToLst(t_lst **lst, const char *file_name);
+int		assembleHack(const t_lst *lst);
 
 int	main(int argc, char *argv[]) {
 	t_lst	*lst;
@@ -24,42 +28,104 @@ int	main(int argc, char *argv[]) {
 		return (error("%s prog.asm", argv[0]), 1);
 	if (readFileToLst(&lst, argv[1]))
 		return 1;
-	// if (assembleHack(lst))
-	// 	return 1;
+	if (assembleHack(lst))
+		return 1;
 	destructLst(lst, free);
 	return 0;
 }
 
 typedef enum {
-	A_INSTRUCTION,
-	C_INSTRUCTION,
-	L_INSTRUCTION
-}	instructionType;
+	A_INSTRUCTION, //@123
+	C_INSTRUCTION, // dest=comp; jmp
+	L_INSTRUCTION, // (LOOP)
+	N_INSTRUCTION // INVALID
+}	e_instructionType;
 
 //@100
 //D=D+1;JMP
-typedef struct s_data {
-	instructionType	i;
+typedef struct s_info {
+	e_instructionType	i;
 	uint16_t	labelSymbol;
 	// char		*variableSymbol;
 	char		*dest;
 	char		*comp;
 	char		*jmp;
-}	t_data;
+}	t_info;
 
-int	parseHack(t_lst **data, const t_lst *lst) {
-	(void)data;
-	(void)lst;
+static int	isSkippableLine(const char *line);
+static int	constructInfo(t_info **info, const char *line);
+
+int	parseHack(t_lst **info_lst, const t_lst *lst) {
+	t_lst	head;
+	t_lst	*curr;
+	t_info	*info;
+
+	curr = &head;
+	while (curr && lst) {
+		if (isSkippableLine(lst->data)) {
+			lst = lst->next;
+			continue ;
+		}
+		if (constructInfo(&info, lst->data))
+			return (destructLst(head.next, free), 1);
+		curr->next = createLst(info, NULL);
+		curr = curr->next;
+		lst = lst->next;
+	}
+	if (!curr)
+		return (destructLst(head.next, free), 1);
+	*info_lst = head.next;
 	return 0;
+}
+
+static int	isSkippableLine(const char *line) {
+	while (ft_isspace(*line))
+		line++;
+	if (*line == '\0')
+		return 1;
+	if (ft_strncmp(line, "//", 2) == 0)
+		return 1;
+	return 0;
+}
+
+static e_instructionType	getInstruction(const char *line);
+static int	constructInfo(t_info **info, const char *line) {
+	t_info	_info;
+
+	while (ft_isspace(*line))
+		line++;
+	_info.i = getInstruction(line);
+	if (_info.i == A_INSTRUCTION)
+		printf("A\n");
+	// 	setAinfo(&_info, line);
+	else if (_info.i == C_INSTRUCTION)
+		printf("C\n");
+	// 	setCinfo(&_info, line);
+	else if (_info.i == L_INSTRUCTION)
+		printf("L\n");
+	// 	setLinfo(&_info, line);
+	*info = malloc(sizeof(t_info));
+	if (!*info)
+		return 1;
+	ft_memmove(*info, &_info, sizeof(t_info));
+	return 0;
+}
+
+static e_instructionType	getInstruction(const char *line) {
+	if (*line == '@')
+		return A_INSTRUCTION;
+	else if (ft_strchr(line, '('))
+		return L_INSTRUCTION;
+	return C_INSTRUCTION;
 }
 
 // int	codeHack(const t_lst *data) {
 // }
 
 int	assembleHack(const t_lst *lst) {
-	t_lst	*data;
+	t_lst	*info_lst;
 
-	if (parseHack(&data, lst))
+	if (parseHack(&info_lst, lst))
 		return 1;
 	// if (codeHack(data))
 	// 	return 1;

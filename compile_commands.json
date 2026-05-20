@@ -152,6 +152,22 @@
       "-Iinclude",
       "-c",
       "-o",
+      "obj/ft_isspace.o",
+      "src/ft_isspace.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/ft_isspace.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/ft_isspace.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
       "obj/lst.o",
       "src/lst.c"
     ],

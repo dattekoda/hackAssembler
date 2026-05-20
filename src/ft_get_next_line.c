@@ -30,7 +30,7 @@ int	ft_get_next_line(char **line, int fd) {
 
 	if (fd == -7 && store)
 		return (safeFree(&store), 0);
-	if (fd < 0 || BUFFER_SIZE <= 0 || !line)
+	if (fd < 0 || BUFFER_SIZE <= 0 || !line || INCLUDE_NL < 0 || 1 < INCLUDE_NL)
 		return -1;
 	read_size = fdToStore(fd, &store);
 	if (read_size < 0)

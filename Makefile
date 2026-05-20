@@ -14,6 +14,7 @@ SRCFILES	:=	main \
 			ft_strchr \
 			ft_strndup \
 			ft_strdup \
+			ft_isspace \
 			lst
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
