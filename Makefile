@@ -7,14 +7,17 @@ INCDIR	:=	include
 SRCDIR		:=	src
 SRCFILES	:=	main \
 			ft_get_next_line \
+			ft_atoi \
 			ft_strlen \
 			ft_strncmp \
 			ft_memmove \
+			ft_memset \
 			ft_strjoin \
 			ft_strchr \
 			ft_strndup \
 			ft_strdup \
 			ft_isspace \
+			ft_isnum \
 			lst
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
