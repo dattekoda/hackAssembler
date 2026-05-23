@@ -2,35 +2,27 @@ NAME	:=	HackAssembler
 CC	:=	cc
 CFLAGS	:=	-Wall -Wextra -Werror
 
-INCDIR	:=	include
+INCFLAGS	:=	-Iinclude -Ilib/include
 
 SRCDIR		:=	src
-SRCFILES	:=	main \
-			ft_get_next_line \
-			ft_atoi \
-			ft_strlen \
-			ft_strncmp \
-			ft_memmove \
-			ft_memset \
-			ft_strjoin \
-			ft_strchr \
-			ft_strndup \
-			ft_strdup \
-			ft_isspace \
-			ft_isnum \
-			lst
+SRCFILES	:=	main
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
 OBJDIR	:=	obj
 OBJS	:=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
+LIBA	:=	lib/lib.a
+
 all:	$(NAME)
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(LIBA)
 	$(CC) $(CFLAGS) $^ -o $@
 
 $(OBJDIR)/%.o:	$(SRCDIR)/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCFLAGS) -c $< -o $@
+
+$(LIBA):
+	make -C $(dir $@)
 
 clean:
 	rm -rf $(OBJDIR)

@@ -195,12 +195,12 @@ static int	creatHackFile(void) {
 
 static void	setHackLine(char buf[16], const t_info *info);
 static void	writeHackLines(int fd, const t_lst *info_lst) {
-	char	buf[16];
+	char	buf[17];
 
+	buf[16] = '\n';
 	while (info_lst) {
 		setHackLine(buf, info_lst->data);
-		write(fd, buf, 16);
-		write(fd, "\n", 1);
+		write(fd, buf, 17);
 		info_lst = info_lst->next;
 	}
 }
@@ -231,9 +231,49 @@ static void	setALine(char buf[16], const t_info *info) {
 	}
 }
 
+static void	setComp(char buf[16], const t_info *info);
+static void	setDest(char buf[16], const t_info *info);
+static void	setJump(char buf[16], const t_info *info);
+
 static void	setCLine(char buf[16], const t_info *info) {
 	(void)info;
-	ft_memset(buf, '3', sizeof(char) * 3);
+	ft_memset(buf, '1', sizeof(char) * 3);
+	ft_memset(buf + 3, '0', sizeof(char) * 13);
+	setComp(buf, info);
+	setDest(buf, info);
+	setJump(buf, info);
+}
+
+static void	setComp(char buf[16], const t_info *info) {
+	char	*m_ptr = ft_strchr(buf, 'M');
+
+	(void)info;
+	if (m_ptr) {
+		*m_ptr = 'A';
+		buf[3] = '1';
+	}
+}
+
+static void	setDest(char buf[16], const t_info *info) {
+	if (!info->dest)
+		return ;
+	if (ft_strchr(info->dest, 'M'))
+		buf[12] = '1';
+	if (ft_strchr(info->dest, 'D'))
+		buf[11] = '1';
+	if (ft_strchr(info->dest, 'M'))
+		buf[10] = '1';
+}
+
+static char	*getJumpBinary(const char *jump) {
+	(void)jump;
+	return ("000");
+}
+
+static void	setJump(char buf[16], const t_info *info) {
+	if (!info->jump)
+		return ;
+	ft_memmove(buf + 13, getJumpBinary(info->jump), 3);
 }
 
 int	assembleHack(const t_lst *lst) {
