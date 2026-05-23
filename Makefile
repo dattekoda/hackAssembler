@@ -11,7 +11,8 @@ SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 OBJDIR	:=	obj
 OBJS	:=	$(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
-LIBA	:=	lib/lib.a
+LIBDIR	:=	lib
+LIBA	:=	$(LIBDIR)/lib.a
 
 all:	$(NAME)
 $(NAME):	$(OBJS) $(LIBA)
@@ -25,6 +26,7 @@ $(LIBA):
 	make -C $(dir $@)
 
 clean:
+	make fclean -C $(LIBDIR)
 	rm -rf $(OBJDIR)
 fclean:	clean
 	rm -rf $(NAME)

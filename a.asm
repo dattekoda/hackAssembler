@@ -1,2 +1,8 @@
 @323
-M=1
+M=1;JGT
+M=1;JEQ
+M=1;JGE
+M=1;JLT
+M=1;JNE
+M=1;JLE
+M=1;JMP

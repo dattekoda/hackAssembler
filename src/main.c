@@ -265,8 +265,19 @@ static void	setDest(char buf[16], const t_info *info) {
 		buf[10] = '1';
 }
 
+#ifndef JUMP_KEYTYPE_SIZE
+# define JUMP_KEYTYPE_SIZE	7
+#endif
 static char	*getJumpBinary(const char *jump) {
-	(void)jump;
+	static const char	dic[7][JUMP_KEYTYPE_SIZE]
+		= {"JGT001", "JEQ010", "JGE011", \
+			"JLT100", "JNE101", "JLE110", "JMP111"};
+	int	i = -1;
+
+	while (++i < JUMP_KEYTYPE_SIZE) {
+		if (ft_strncmp(jump, dic[i], 3) == 0)
+			return (char *)dic[i] + 3;
+	}
 	return ("000");
 }
 
