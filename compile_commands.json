@@ -26,6 +26,57 @@
       "-Ilib/include",
       "-c",
       "-o",
+      "obj/isValidArg.o",
+      "src/isValidArg.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/isValidArg.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/isValidArg.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/readFileToLst.o",
+      "src/readFileToLst.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/readFileToLst.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/readFileToLst.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack.o",
+      "src/assembleHack.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
       "obj/setHackLine.o",
       "src/setHackLine.c"
     ],
