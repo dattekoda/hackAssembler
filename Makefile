@@ -5,7 +5,13 @@ CFLAGS	:=	-Wall -Wextra -Werror
 INCFLAGS	:=	-Iinclude -Ilib/include
 
 SRCDIR		:=	src
-SRCFILES	:=	main
+SRCFILES	:=	main \
+			setHackLine \
+			error \
+			setInfo \
+			hash \
+			predefinedSymbol \
+			setLinfo
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
 OBJDIR	:=	obj

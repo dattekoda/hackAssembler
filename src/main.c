@@ -1,5 +1,7 @@
+#include "lst.h"
+#include "hash.h"
+#include "info.h"
 #include <stddef.h>
-#include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -7,7 +9,6 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include "lst.h"
 
 int	ft_atoi(const char *s);
 size_t	ft_strlen(const char *s);
@@ -40,28 +41,24 @@ int	main(int argc, char *argv[]) {
 	return 0;
 }
 
-typedef enum {
-	A_INSTRUCTION, //@123
-	C_INSTRUCTION, // dest=comp; jmp
-	L_INSTRUCTION, // (LOOP)
-	N_INSTRUCTION // INVALID
-}	e_instructionType;
-
-//@100
-//D=D+1;JMP
-typedef struct s_info {
-	e_instructionType	i;
-	uint16_t	labelSymbol;
-	// char		*variableSymbol;
-	char		*dest;
-	char		*comp;
-	char		*jump;
-}	t_info;
+// TODO: implement constructSymbolTable()
+// int	constructSymbolTable(const t_lst *lst) {
+// }
+int	constructSymbolTable(const t_lst *lst);
+int	constructInfos(t_lst **info_lst, const t_lst *lst);
+int	parseHack(t_lst **info_lst, const t_lst *lst) {
+	// if (constructSymbolTable(lst))
+	// 	return (freeHashtab(), 1);
+	if (constructInfos(info_lst, lst))
+		return (freeHashtab(), 1);
+	freeHashtab();
+	return 0;
+}
 
 static int	isSkippableLine(const char *line);
 static int	constructInfo(t_info **info, char *line);
 
-int	parseHack(t_lst **info_lst, const t_lst *lst) {
+int	constructInfos(t_lst **info_lst, const t_lst *lst) {
 	t_lst	head;
 	t_lst	*curr;
 	t_info	*info;
@@ -84,6 +81,15 @@ int	parseHack(t_lst **info_lst, const t_lst *lst) {
 	return 0;
 }
 
+static int	constructInfo(t_info **info, char *line) {
+	*info = malloc(sizeof(t_info));
+	if (!*info)
+		return (error("%s", strerror(errno)), 1);
+	if (setInfo(*info, line))
+		return (free(*info), 1);
+	return 0;
+}
+
 static int	isSkippableLine(const char *line) {
 	while (ft_isspace(*line))
 		line++;
@@ -92,90 +98,6 @@ static int	isSkippableLine(const char *line) {
 	if (ft_strncmp(line, "//", 2) == 0)
 		return 1;
 	return 0;
-}
-
-static e_instructionType	getInstruction(const char *line);
-static void			setAinfo(t_info *_info, const char *line);
-static void			setCinfo(t_info *_info, char *line);
-static int			isInvalidInfo(const t_info *_info);
-
-static int	constructInfo(t_info **info, char *line) {
-	t_info	_info;
-
-	ft_memset(&_info, 0, sizeof(t_info));
-	while (ft_isspace(*line))
-		line++;
-	_info.i = getInstruction(line);
-	if (_info.i == A_INSTRUCTION)
-		setAinfo(&_info, line);
-	else if (_info.i == C_INSTRUCTION)
-		setCinfo(&_info, line);
-	else if (_info.i == L_INSTRUCTION)
-		printf("L\n");
-	// 	setLinfo(&_info, line);
-	if (isInvalidInfo(&_info))
-		return 1;
-	*info = malloc(sizeof(t_info));
-	if (!*info)
-		return (error("%s", strerror(errno)), 1);
-	ft_memmove(*info, &_info, sizeof(t_info));
-	return 0;
-}
-
-// wanna identify which line is invalid
-static int	isInvalidInfo(const t_info *_info) {
-	if (_info->i == C_INSTRUCTION) {
-		if (!*_info->comp)
-			return (error("set comp"), 1);
-	}
-	return 0;
-}
-
-// handle A instruction like @432
-// TODO: need to modify to handle symbol pattern like @loop
-static void	setAinfo(t_info *_info, const char *line) {
-	_info->labelSymbol = ft_atoi(line + 1) & (0x00007FFF);
-	// skip "@" so line + 1
-	// printf("A: %d\n", _info->labelSymbol);
-}
-
-static void	setCinfo(t_info *_info, char *line) {
-	char	*semi_column_p = ft_strchr(line, ';');
-	char	*equal_p = ft_strchr(line, '=');
-
-	if (semi_column_p) {
-		*semi_column_p = '\0';
-		_info->jump = semi_column_p + 1;
-	}
-	if (equal_p) {
-		*equal_p = '\0';
-		_info->dest = line;
-		_info->comp = equal_p + 1;
-	} else {
-		line = _info->comp = line;
-	}
-	// printf("C: comp: %s, dest: %s, jump: %s\n",
-	// 		_info->comp, _info->dest, _info->jump);
-}
-
-//(loop) = 10
-//@loop = 10
-//@r1 = 1
-// static char	*getSymbol(char *line) {
-// 	char	*closep = ft_strchr(line + 1, ')');
-//
-// 	if (closep) {
-// 		*closep = '\0';
-// 		return str;
-// 	}
-// }
-
-static e_instructionType	getInstruction(const char *line) {
-	if (*line == '@')
-		return A_INSTRUCTION;
-	else if (ft_strchr(line, '('))
-		return L_INSTRUCTION;
-	return C_INSTRUCTION;
 }
 
 static int	creatHackFile(void);
@@ -207,7 +129,6 @@ static int	creatHackFile(void) {
 	return fd;
 }
 
-static void	setHackLine(char buf[16], const t_info *info);
 static void	writeHackLines(int fd, const t_lst *info_lst) {
 	char	buf[17];
 
@@ -217,141 +138,6 @@ static void	writeHackLines(int fd, const t_lst *info_lst) {
 		write(fd, buf, 17);
 		info_lst = info_lst->next;
 	}
-}
-
-static void	setALine(char buf[16], const t_info *info);
-static void	setCLine(char buf[16], const t_info *info);
-
-static void	setHackLine(char buf[16], const t_info *info) {
-	if (info->i == A_INSTRUCTION)
-		setALine(buf, info);
-	else if (info->i == C_INSTRUCTION)
-		setCLine(buf, info);
-	else if (info->i == L_INSTRUCTION)
-		ft_memset(buf, '1', sizeof(char) * 16);
-}
-
-static void	setALine(char buf[16], const t_info *info) {
-	uint16_t	offset = 1 << 14;
-	unsigned char	idx = 0;
-
-	buf[0] = '0';
-	while (++idx < 16) {
-		if (offset & info->labelSymbol)
-			buf[idx] = '1';
-		else
-			buf[idx] = '0';
-		offset >>= 1;
-	}
-}
-
-static void	setComp(char buf[7], const char *comp);
-static void	setDest(char buf[3], const char *dest);
-static void	setJump(char buf[3], const char *jump);
-
-static void	setCLine(char buf[16], const t_info *info) {
-	ft_memset(buf, '1', sizeof(char) * 3);
-	ft_memset(buf + 3, '0', sizeof(char) * 13);
-	setComp(buf + 3, info->comp);
-	setDest(buf + 10, info->dest);
-	setJump(buf + 13, info->jump);
-}
-
-static void	set1Comp(char buf[6], const char *comp);
-static void	set2Comp(char buf[6], const char *comp);
-static void	set3Comp(char buf[6], const char *comp);
-static void	setComp(char buf[7], const char *comp) {
-	const size_t	comp_len = ft_strlen(comp);
-	char		*m_ptr = ft_strchr(comp, 'M');
-
-	if (m_ptr) {
-		*m_ptr = 'A';
-		buf[0] = '1';
-	}
-	// printf("comp: %s\n", comp);
-	if (comp_len == 1)
-		set1Comp(buf + 1, comp);
-	else if (comp_len == 2)
-		set2Comp(buf + 1, comp);
-	else if (comp_len == 3)
-		set3Comp(buf + 1, comp);
-}
-
-static void	set1Comp(char buf[6], const char *comp) {
-	if (*comp == '0')
-		ft_memmove(buf, "10101", 5);
-	else if (*comp == '1')
-		ft_memset(buf, '1', 6);
-	else if (*comp == 'D')
-		ft_memset(buf + 2, '1', 2);
-	else if (*comp == 'A')
-		ft_memset(buf, '1', 2);
-}
-
-static void	set2Comp(char buf[6], const char *comp) {
-	if (*comp == '-')
-		buf[4] = '1';
-	if (*(comp + 1) == 'A') {
-		buf[5] = '1';
-		ft_memset(buf, '1', 2);
-	} else if (*(comp + 1) == 'D') {
-		buf[5] = '1';
-		ft_memset(buf + 2, '1', 2);
-	} else {
-		ft_memset(buf, '1', 3);
-	}
-}
-
-static char	*get3CompBinary(const char *comp);
-static void	set3Comp(char buf[6], const char *comp) {
-	ft_memmove(buf, get3CompBinary(comp), 6);
-}
-
-static char	*get3CompBinary(const char *comp) {
-	static const char	dic[10][9] \
-		= {"D+1011111", "A+1110111", "D-1001110", \
-		"A-1110010", "D+A000010", "D-A010011", \
-		"A-D000111", "D&A000000", "D|A010101" };
-
-	for (int i = 0; i < 9; ++i) {
-		if (ft_strncmp(comp, dic[i], 3) == 0) {
-			return (char *)dic[i] + 3;
-		}
-	}
-	return "000000";
-}
-
-static void	setDest(char buf[3], const char *dest) {
-	if (!dest)
-		return ;
-	if (ft_strchr(dest, 'M'))
-		buf[2] = '1';
-	if (ft_strchr(dest, 'D'))
-		buf[1] = '1';
-	if (ft_strchr(dest, 'A'))
-		buf[0] = '1';
-}
-
-#ifndef JUMP_KEYTYPE_SIZE
-# define JUMP_KEYTYPE_SIZE	7
-#endif
-static char	*getJumpBinary(const char *jump) {
-	static const char	dic[7][JUMP_KEYTYPE_SIZE]
-		= {"JGT001", "JEQ010", "JGE011", \
-			"JLT100", "JNE101", "JLE110", "JMP111"};
-	int	i = -1;
-
-	while (++i < JUMP_KEYTYPE_SIZE) {
-		if (ft_strncmp(jump, dic[i], 3) == 0)
-			return (char *)dic[i] + 3;
-	}
-	return ("000");
-}
-
-static void	setJump(char buf[3], const char *jump) {
-	if (!jump || ft_strlen(jump) != 3)
-		return ;
-	ft_memmove(buf, getJumpBinary(jump), 3);
 }
 
 int	assembleHack(const t_lst *lst) {
@@ -376,7 +162,7 @@ int	readFileToLst(t_lst **lst) {
 	if (fd < 0)
 		return (error("%s: %s", g_file_name, strerror(errno)), 1);
 	if (allocLst(lst, fd))
-		return (close(fd), 1);
+		return (close(fd), error("%s", strerror(errno)), 1);
 	close(fd);
 	return 0;
 }
@@ -391,26 +177,16 @@ int	allocLst(t_lst **lst, int fd) {
 	while (curr) {
 		gnl_ret = ft_get_next_line(&line, fd);
 		if (gnl_ret == -1)
-			return (destructLst(head.next, free), error("%s", strerror(errno)), 1);
+			return (destructLst(head.next, free), 1);
 		if (gnl_ret == 0)
 			break ;
 		curr->next = createLst(line, NULL);
 		curr = curr->next;
 	}
 	if (!curr)
-		return (destructLst(head.next, free), error("%s", strerror(errno)), 1);
+		return (destructLst(head.next, free), 1);
 	*lst = head.next;
 	return 0;
-}
-
-void	error(const char *fmt, ...) {
-	va_list	ap;
-
-	dprintf(STDERR_FILENO, "hackAssembler Error: ");
-	va_start(ap, fmt);
-	vdprintf(STDERR_FILENO, fmt, ap);
-	dprintf(STDERR_FILENO, "\n");
-	va_end(ap);
 }
 
 static int	isInvalidArg(int argc, char *argv[]) {

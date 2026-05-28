@@ -21,6 +21,7 @@ SRCFILES	:=	ft_atoi \
 			ft_strjoin \
 			ft_strlen \
 			ft_strncmp \
+			ft_strcmp \
 			ft_strndup \
 			lst
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
