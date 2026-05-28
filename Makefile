@@ -8,13 +8,18 @@ SRCDIR		:=	src
 SRCFILES	:=	main \
 			isValidArg \
 			readFileToLst \
-			assembleHack \
-			setHackLine \
 			error \
-			setInfo \
-			hash \
-			predefinedSymbol \
-			setLabelSymbol
+			$(addprefix assembleHack/, \
+				assembleHack \
+				codeHack \
+				hash \
+				isSkippable \
+				parseHack \
+				predefinedSymbol \
+				setHackLine \
+				setInfo \
+				setLabelSymbol \
+			)
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
 OBJDIR	:=	obj

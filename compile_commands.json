@@ -60,40 +60,6 @@
       "-Ilib/include",
       "-c",
       "-o",
-      "obj/assembleHack.o",
-      "src/assembleHack.c"
-    ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/cc",
-      "-Wall",
-      "-Wextra",
-      "-Werror",
-      "-Iinclude",
-      "-Ilib/include",
-      "-c",
-      "-o",
-      "obj/setHackLine.o",
-      "src/setHackLine.c"
-    ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setHackLine.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setHackLine.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/cc",
-      "-Wall",
-      "-Wextra",
-      "-Werror",
-      "-Iinclude",
-      "-Ilib/include",
-      "-c",
-      "-o",
       "obj/error.o",
       "src/error.c"
     ],
@@ -111,12 +77,12 @@
       "-Ilib/include",
       "-c",
       "-o",
-      "obj/setInfo.o",
-      "src/setInfo.c"
+      "obj/assembleHack/assembleHack.o",
+      "src/assembleHack/assembleHack.c"
     ],
     "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setInfo.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setInfo.o"
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/assembleHack.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/assembleHack.o"
   },
   {
     "arguments": [
@@ -128,12 +94,12 @@
       "-Ilib/include",
       "-c",
       "-o",
-      "obj/hash.o",
-      "src/hash.c"
+      "obj/assembleHack/codeHack.o",
+      "src/assembleHack/codeHack.c"
     ],
     "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/hash.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/hash.o"
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/codeHack.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/codeHack.o"
   },
   {
     "arguments": [
@@ -145,12 +111,12 @@
       "-Ilib/include",
       "-c",
       "-o",
-      "obj/predefinedSymbol.o",
-      "src/predefinedSymbol.c"
+      "obj/assembleHack/hash.o",
+      "src/assembleHack/hash.c"
     ],
     "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/predefinedSymbol.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/predefinedSymbol.o"
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/hash.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/hash.o"
   },
   {
     "arguments": [
@@ -162,12 +128,97 @@
       "-Ilib/include",
       "-c",
       "-o",
-      "obj/setLabelSymbol.o",
-      "src/setLabelSymbol.c"
+      "obj/assembleHack/isSkippable.o",
+      "src/assembleHack/isSkippable.c"
     ],
     "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setLabelSymbol.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setLabelSymbol.o"
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/isSkippable.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/isSkippable.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack/parseHack.o",
+      "src/assembleHack/parseHack.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/parseHack.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/parseHack.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack/predefinedSymbol.o",
+      "src/assembleHack/predefinedSymbol.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/predefinedSymbol.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/predefinedSymbol.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack/setHackLine.o",
+      "src/assembleHack/setHackLine.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setHackLine.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setHackLine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack/setInfo.o",
+      "src/assembleHack/setInfo.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setInfo.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setInfo.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/assembleHack/setLabelSymbol.o",
+      "src/assembleHack/setLabelSymbol.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setLabelSymbol.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setLabelSymbol.o"
   },
   {
     "arguments": [

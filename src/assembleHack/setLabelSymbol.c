@@ -10,7 +10,7 @@ void	error(const char *fmt, ...);
 int	setLabelSymbol(char *line, int line_no);
 t_nlist	*lookupPredefined(const char *key);
 
-static int	isSkippableLine(const char *line);
+int	isSkippableLine(const char *line);
 
 int	constructSymbolTable(const t_lst *lst) {
 	int	line_no = 0;
@@ -26,16 +26,6 @@ int	constructSymbolTable(const t_lst *lst) {
 		}
 		++line_no;
 	}
-	return 0;
-}
-
-static int	isSkippableLine(const char *line) {
-	while (ft_isspace(*line))
-		line++;
-	if (*line == '\0')
-		return 1;
-	if (ft_strncmp(line, "//", 2) == 0)
-		return 1;
 	return 0;
 }
 
