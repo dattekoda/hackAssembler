@@ -56,8 +56,7 @@ static void	freeNlist(t_nlist *np) {
 
 void	freeHashtab(void) {
 	for (int i = 0; i < HASHSIZE; ++i) {
-		if (hashtab[i])
-			freeNlist(hashtab[i]);
+		freeNlist(hashtab[i]);
 	}
 }
 

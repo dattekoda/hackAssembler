@@ -23,10 +23,6 @@ int	setInfo(t_info *info, char *line) {
 		setAinfo(info, line + 1);
 	else if (info->i == C_INSTRUCTION)
 		setCinfo(info, line);
-	// else if (info->i == L_INSTRUCTION)
-	// 	printf("L\n");
-	//TODO: search where info->i defined.
-	// 	setLinfo(&_info, line);
 	if (isInvalidInfo(info))
 		return 1;
 	return 0;
@@ -47,14 +43,18 @@ static int	isInvalidInfo(const t_info *_info) {
 // handle A instruction like @432
 // TODO: need to handle symbol pattern like @loop
 static void	setAinfo(t_info *_info, const char *line) {
-	if (ft_isnum(*line))
-		_info->labelSymbol = ft_atoi(line + 1) & (0x00007FFF);
+	static uint16_t	rem = 15;
+
+	if (ft_isnum(*line)) {
+		_info->labelSymbol = ft_atoi(line) & (0x00007FFF);
+		return ;
+	}
+	const t_nlist	*tmp = lookup(line);
+	if (tmp)
+		_info->labelSymbol = tmp->defn;
 	else {
-		const t_nlist	*tmp = lookup(line);
-		if (tmp)
-			_info->labelSymbol = tmp->defn;
-		else
-			_info->labelSymbol = UINT16_MAX;
+		_info->labelSymbol = ++rem;
+		registerTable(line, rem);
 	}
 }
 

@@ -15,5 +15,331 @@
     "directory": "/home/ubuntu/nand2tetris/hackAssembler",
     "file": "/home/ubuntu/nand2tetris/hackAssembler/src/main.c",
     "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/setHackLine.o",
+      "src/setHackLine.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setHackLine.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setHackLine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/error.o",
+      "src/error.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/error.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/error.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/setInfo.o",
+      "src/setInfo.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setInfo.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setInfo.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/hash.o",
+      "src/hash.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/hash.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/hash.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/predefinedSymbol.o",
+      "src/predefinedSymbol.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/predefinedSymbol.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/predefinedSymbol.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-Ilib/include",
+      "-c",
+      "-o",
+      "obj/setLabelSymbol.o",
+      "src/setLabelSymbol.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/setLabelSymbol.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/setLabelSymbol.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_atoi.o",
+      "src/ft_atoi.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_atoi.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_atoi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_get_next_line.o",
+      "src/ft_get_next_line.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_get_next_line.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_get_next_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_isnum.o",
+      "src/ft_isnum.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_isnum.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_isnum.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_isspace.o",
+      "src/ft_isspace.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_isspace.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_isspace.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_memmove.o",
+      "src/ft_memmove.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_memmove.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_memmove.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_memset.o",
+      "src/ft_memset.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_memset.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_memset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strchr.o",
+      "src/ft_strchr.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strchr.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strdup.o",
+      "src/ft_strdup.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strdup.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strdup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strjoin.o",
+      "src/ft_strjoin.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strjoin.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strjoin.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strlen.o",
+      "src/ft_strlen.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strlen.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strncmp.o",
+      "src/ft_strncmp.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strncmp.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strncmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strcmp.o",
+      "src/ft_strcmp.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strcmp.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/ft_strndup.o",
+      "src/ft_strndup.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strndup.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strndup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/lst.o",
+      "src/lst.c"
+    ],
+    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/lst.c",
+    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/lst.o"
   }
 ]

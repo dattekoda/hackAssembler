@@ -10,8 +10,6 @@ void	setHackLine(char buf[16], const t_info *info) {
 		setALine(buf, info);
 	else if (info->i == C_INSTRUCTION)
 		setCLine(buf, info);
-	else if (info->i == L_INSTRUCTION)
-		ft_memset(buf, '1', sizeof(char) * 16);
 }
 
 static void	setALine(char buf[16], const t_info *info) {

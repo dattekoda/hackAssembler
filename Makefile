@@ -6,12 +6,15 @@ INCFLAGS	:=	-Iinclude -Ilib/include
 
 SRCDIR		:=	src
 SRCFILES	:=	main \
+			isValidArg \
+			readFileToLst \
+			assembleHack \
 			setHackLine \
 			error \
 			setInfo \
 			hash \
 			predefinedSymbol \
-			setLinfo
+			setLabelSymbol
 SRCS		:=	$(addprefix $(SRCDIR)/, $(addsuffix .c, $(SRCFILES)))
 
 OBJDIR	:=	obj

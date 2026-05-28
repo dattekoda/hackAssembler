@@ -7,25 +7,24 @@
 #include <errno.h>
 
 void	error(const char *fmt, ...);
-int	setLinfo(char *line, int line_no);
+int	setLabelSymbol(char *line, int line_no);
 t_nlist	*lookupPredefined(const char *key);
 
 static int	isSkippableLine(const char *line);
 
 int	constructSymbolTable(const t_lst *lst) {
-	int	line_no = 1;
+	int	line_no = 0;
 
-	while (lst) {
+	for (; lst; lst = lst->next) {
 		if (isSkippableLine(lst->data))
 			continue ;
 		char	*symbol_ptr = ft_strchr(lst->data, '(');
 		if (symbol_ptr) {
-			if (setLinfo(symbol_ptr + 1, line_no))
+			if (setLabelSymbol(symbol_ptr + 1, line_no))
 				return 1;
 			continue ;
 		}
 		++line_no;
-		lst = lst->next;
 	}
 	return 0;
 }
@@ -40,15 +39,15 @@ static int	isSkippableLine(const char *line) {
 	return 0;
 }
 
-int	setLinfo(char *line, int line_no) {
-	char	*closePtr = ft_strchr(line, ')');
+int	setLabelSymbol(char *symbol_ptr, int line_no) {
+	char	*closePtr = ft_strchr(symbol_ptr, ')');
 
 	if (!closePtr)
-		return (error("set label symbol correctly)"), 1);
+		return (error("set label symbol correctly"), 1);
 	*closePtr = '\0';
-	if (lookupPredefined(line))
+	if (lookupPredefined(symbol_ptr))
 		return (error("Don't use predefined symbol as a label symbol"), 1);
-	if (registerTable(line, line_no))
+	if (!registerTable(symbol_ptr, line_no))
 		return (error("%s\n", strerror(errno)), 1);
 	return 0;
 }
