@@ -1,23 +1,21 @@
 #include <limits.h>
 #include <stddef.h>
 
-int	ft_isspace(int c);
-int	ft_isnum(int c);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int ft_isspace(int c);
+int ft_isnum(int c);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
-int	ft_atoi(const char *s) {
-	int	isMinus;
-	int	i;
+int ft_atoi(const char *s) {
+  int isMinus = 0;
+  int i = 0;
 
-	isMinus = 0;
-	i = 0;
-	while (ft_isspace(*s))
-		s++;
-	if (*s == '-' || *s == '+')
-		isMinus = (*(s++) == '-');
-	while (ft_isnum(*s))
-		i = 10 * i + *(s++) - '0';
-	return (1 - isMinus * 2) * i;
+  while (ft_isspace(*s))
+    s++;
+  if (*s == '-' || *s == '+')
+    isMinus = (*(s++) == '-');
+  while (ft_isnum(*s))
+    i = 10 * i + *(s++) - '0';
+  return (1 - isMinus * 2) * i;
 }
 
 // #include <stdio.h>

@@ -12,9 +12,9 @@
       "obj/main.o",
       "src/main.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/main.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/main.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/main.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/main.o"
   },
   {
     "arguments": [
@@ -29,9 +29,9 @@
       "obj/isValidArg.o",
       "src/isValidArg.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/isValidArg.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/isValidArg.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/isValidArg.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/isValidArg.o"
   },
   {
     "arguments": [
@@ -46,9 +46,9 @@
       "obj/readFileToLst.o",
       "src/readFileToLst.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/readFileToLst.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/readFileToLst.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/readFileToLst.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/readFileToLst.o"
   },
   {
     "arguments": [
@@ -63,9 +63,9 @@
       "obj/error.o",
       "src/error.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/error.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/error.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/error.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/error.o"
   },
   {
     "arguments": [
@@ -80,9 +80,9 @@
       "obj/assembleHack/assembleHack.o",
       "src/assembleHack/assembleHack.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/assembleHack.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/assembleHack.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/assembleHack.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/assembleHack.o"
   },
   {
     "arguments": [
@@ -97,9 +97,9 @@
       "obj/assembleHack/codeHack.o",
       "src/assembleHack/codeHack.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/codeHack.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/codeHack.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/codeHack.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/codeHack.o"
   },
   {
     "arguments": [
@@ -114,9 +114,9 @@
       "obj/assembleHack/hash.o",
       "src/assembleHack/hash.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/hash.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/hash.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/hash.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/hash.o"
   },
   {
     "arguments": [
@@ -131,9 +131,9 @@
       "obj/assembleHack/isSkippable.o",
       "src/assembleHack/isSkippable.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/isSkippable.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/isSkippable.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/isSkippable.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/isSkippable.o"
   },
   {
     "arguments": [
@@ -148,9 +148,9 @@
       "obj/assembleHack/parseHack.o",
       "src/assembleHack/parseHack.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/parseHack.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/parseHack.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/parseHack.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/parseHack.o"
   },
   {
     "arguments": [
@@ -165,9 +165,9 @@
       "obj/assembleHack/predefinedSymbol.o",
       "src/assembleHack/predefinedSymbol.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/predefinedSymbol.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/predefinedSymbol.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/predefinedSymbol.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/predefinedSymbol.o"
   },
   {
     "arguments": [
@@ -182,9 +182,9 @@
       "obj/assembleHack/setHackLine.o",
       "src/assembleHack/setHackLine.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setHackLine.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setHackLine.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/setHackLine.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/setHackLine.o"
   },
   {
     "arguments": [
@@ -199,9 +199,9 @@
       "obj/assembleHack/setInfo.o",
       "src/assembleHack/setInfo.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setInfo.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setInfo.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/setInfo.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/setInfo.o"
   },
   {
     "arguments": [
@@ -216,9 +216,9 @@
       "obj/assembleHack/setLabelSymbol.o",
       "src/assembleHack/setLabelSymbol.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/src/assembleHack/setLabelSymbol.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/obj/assembleHack/setLabelSymbol.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/src/assembleHack/setLabelSymbol.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/obj/assembleHack/setLabelSymbol.o"
   },
   {
     "arguments": [
@@ -232,9 +232,9 @@
       "obj/ft_atoi.o",
       "src/ft_atoi.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_atoi.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_atoi.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_atoi.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_atoi.o"
   },
   {
     "arguments": [
@@ -248,9 +248,9 @@
       "obj/ft_get_next_line.o",
       "src/ft_get_next_line.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_get_next_line.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_get_next_line.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_get_next_line.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_get_next_line.o"
   },
   {
     "arguments": [
@@ -264,9 +264,9 @@
       "obj/ft_isnum.o",
       "src/ft_isnum.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_isnum.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_isnum.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_isnum.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_isnum.o"
   },
   {
     "arguments": [
@@ -280,9 +280,9 @@
       "obj/ft_isspace.o",
       "src/ft_isspace.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_isspace.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_isspace.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_isspace.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_isspace.o"
   },
   {
     "arguments": [
@@ -296,9 +296,9 @@
       "obj/ft_memmove.o",
       "src/ft_memmove.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_memmove.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_memmove.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_memmove.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_memmove.o"
   },
   {
     "arguments": [
@@ -312,9 +312,9 @@
       "obj/ft_memset.o",
       "src/ft_memset.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_memset.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_memset.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_memset.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_memset.o"
   },
   {
     "arguments": [
@@ -328,9 +328,9 @@
       "obj/ft_strchr.o",
       "src/ft_strchr.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strchr.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strchr.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strchr.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strchr.o"
   },
   {
     "arguments": [
@@ -344,9 +344,9 @@
       "obj/ft_strdup.o",
       "src/ft_strdup.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strdup.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strdup.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strdup.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strdup.o"
   },
   {
     "arguments": [
@@ -360,9 +360,9 @@
       "obj/ft_strjoin.o",
       "src/ft_strjoin.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strjoin.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strjoin.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strjoin.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strjoin.o"
   },
   {
     "arguments": [
@@ -376,9 +376,9 @@
       "obj/ft_strlen.o",
       "src/ft_strlen.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strlen.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strlen.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strlen.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strlen.o"
   },
   {
     "arguments": [
@@ -392,9 +392,9 @@
       "obj/ft_strncmp.o",
       "src/ft_strncmp.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strncmp.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strncmp.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strncmp.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strncmp.o"
   },
   {
     "arguments": [
@@ -408,9 +408,9 @@
       "obj/ft_strcmp.o",
       "src/ft_strcmp.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strcmp.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strcmp.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strcmp.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strcmp.o"
   },
   {
     "arguments": [
@@ -424,9 +424,9 @@
       "obj/ft_strndup.o",
       "src/ft_strndup.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/ft_strndup.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/ft_strndup.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/ft_strndup.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/ft_strndup.o"
   },
   {
     "arguments": [
@@ -440,8 +440,8 @@
       "obj/lst.o",
       "src/lst.c"
     ],
-    "directory": "/home/ubuntu/nand2tetris/hackAssembler/lib",
-    "file": "/home/ubuntu/nand2tetris/hackAssembler/lib/src/lst.c",
-    "output": "/home/ubuntu/nand2tetris/hackAssembler/lib/obj/lst.o"
+    "directory": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib",
+    "file": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/src/lst.c",
+    "output": "/home/ubuntu/programming/nand2tetris/hackAssembler/lib/obj/lst.o"
   }
 ]
